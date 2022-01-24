@@ -1,0 +1,239 @@
+html{
+    scroll-behavior: smooth;
+}
+.contenedor{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    margin-top: 90px;
+}
+.contenedor .welcome{
+    background-color: black;
+    padding-top: 10%;
+    width: 100%;
+    height: 40vh;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+.contenedor .welcome h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 4.5vh;
+}
+.contenedor .welcome img{
+    width: 100px;
+    margin-top: 20px;
+}
+.contenedor .resumen{
+    padding: 10px 10px;
+    color: #000;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+.contenedor .titulo_uno{
+    width: 100%;
+    height: 90px;
+    padding: 20px;
+    background-color:#0C33BC ;
+    text-align: center;
+}
+.contenedor .titulo_uno h1{
+    margin: 0px;
+    font-weight: 800;
+    font-size: 38.1621px;
+    color: #FFFFFF;
+    text-shadow: 3.76777px 1.25592px 5.0237px rgba(255, 255, 255, 0.62);
+}
+.contenedor .texto_titulo_uno{
+    padding: 40px 20px 20px 15px;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+    text-align: center;
+    line-height: 25px;
+    background-color: white;
+}
+.contenedor .compra{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+}
+.contenedor .compra button{
+    background-color: #000;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    text-shadow: 3.76777px 1.25592px 5.0237px rgba(255, 255, 255, 0.62);
+}
+.contenedor .titulo_dos{
+    width: 100%;
+    height: 90px;
+    padding: 20px;
+    background-color:#000 ;
+    text-align: center;
+}
+.contenedor .titulo_dos h1{
+    margin: 0px;
+    font-weight: 800;
+    color: #FFFFFF;
+    text-shadow: 3.76777px 1.25592px 5.0237px rgba(255, 255, 255, 0.62);
+}
+.contenedor .catalogoM{
+    width: 100%;
+    display: flex;
+    color: #000;
+    background-color: #fff;
+    padding-top: 30px;
+    margin: auto;
+}
+.contenedor .catalogoM .text{
+    width: 50%;
+    text-align: center;
+    padding: 0px 20px;
+
+}
+.contenedor .catalogoM .img{
+    margin-top: 30px;
+    width: 50%;
+}
+.contenedor .catalogoM .text h1{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 29.3792px;
+    color: #000000;
+    text-shadow: 3.9306px 1.3102px 5.24079px rgba(0, 0, 0, 0.62);
+}
+.contenedor .catalogoM .text p{
+    line-height: 24px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+} 
+.contenedor .publicidadG{
+    background-color: #fff;
+    text-align: center;
+    padding: 30px 15% 0px;
+}
+.contenedor .publicidadG h1{
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 29.3792px;
+    color: #000000;
+    text-shadow: 3.9306px 1.3102px 5.24079px rgba(0, 0, 0, 0.62);
+    text-transform: uppercase;
+}
+.contenedor .publicidadG p{
+    margin-top: 20px;
+    line-height: 24px;
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+}
+.contenedor .nuestrasV{
+    width: 100%;
+    height: 105vh;
+    text-align: center;
+}
+.contenedor .nuestrasV h1{
+    margin: 0px;
+    font-weight: 800;
+    color: #FFFFFF;
+    text-shadow: 3.76777px 1.25592px 5.0237px rgba(255, 255, 255, 0.62);
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+.contenedor .nuestrasV{
+    
+}
+.contenedor .nuestrasV .ventajaUno{
+    text-align: center;
+    width: 60%;
+    background-color: brown;
+    padding: 10px 5%;
+    margin-top: 30px;
+    float: left;
+}
+.contenedor .nuestrasV .ventajaUno h2{
+    text-align: center;
+    margin: 0px;
+    font-weight: 800;
+    font-size: 24.1621px;
+    color: #FFFFFF;
+    text-shadow: 3.76777px 1.25592px 5.0237px rgba(255, 255, 255, 0.62);
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+.contenedor .nuestrasV .ventajaUno p{
+    margin-top: 20px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+.contenedor .nuestrasV .ventajaDos{
+    text-align: center;
+    width: 60%;
+    background-color: brown;
+    padding: 10px 5%;
+    margin-top: 30px;
+    left: 0px;
+    float: right;
+}
+.contenedor .nuestrasV .ventajaDos h2{
+    text-align: center;
+    margin: 0px;
+    font-weight: 800;
+    font-size: 24.1621px;
+    color: #FFFFFF;
+    text-shadow: 3.76777px 1.25592px 5.0237px rgba(255, 255, 255, 0.62);
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+.contenedor .nuestrasV .ventajaDos p{
+    margin-top: 20px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+.contenedor .TextosU{
+    text-align: center;
+    width: 100%;
+    height: 60vh;
+    background-color: white;
+}
+.contenedor .TextosU h2{
+    color: #FF0000;
+
+text-shadow: 2.58418px 0.861393px 3.44557px rgba(255, 0, 0, 0.62);
+}
+.contenedor .TextosU p{
+    padding: 40px 20px 20px 15px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+    text-align: center;
+    line-height: 25px;
+    background-color: white;
+    margin: 0px;
+}
+.contenedor .planes{
+    background-color: white;
+    width: 100%;
+    text-align: center;
+}
+.contenedor .planes .plan{
+    margin-bottom: 40px;
+}
+@media only screen and (min-width: 375px){
+    
+    .contenedor .titulo_uno h1 {
+        font-size: 3.3rem;
+     }
+}
+@media only screen and (min-width: 891px){
+    .contenedor{
+        width: 891px;
+        margin: auto;
+    }
+
+}

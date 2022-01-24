@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Impulse | Servicios</title>
+     <!--- basic page needs
+    ================================================== -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <%- include('Componentes/Links.html'); %>
+</head>
+<body>
+    <%- include('Componentes/Nav.html'); %>
+
+    <div class="contenedor">
+        <div class="welcome">
+            <h1>Bienvenido</h1>
+            <img src="images/logo.svg" alt="">
+        </div>
+        <div class="wow animate__animated animate__fadeIn resumen">
+            <p>Somos la primera empresa impulsora de negocios mediante tecnologia y metodos profesionales</p>
+        </div>
+        <div class="titulo_uno">
+            <h1>IMPULSA TU NEGOCIO</h1>
+        </div>
+        <div class="wow animate__animated animate__fadeIn texto_titulo_uno">
+            <p>Pasa al siguiente nivel con tu negocio y empieza a impulsarlo con tecologia! <br> 
+            Te ofrecemos herramientas profesionales para automatizar tus ventas, con disenos interactivos y profesionales,
+            publicidad gratuita en nuestras paginas 
+            </p>
+        </div>
+        <div class="compra">
+            <a href="#planes"><button>Ver Planes</button></a>
+        </div>
+        <div class="titulo_dos">
+            <h1 class="wow animate__animated animate__fadeInDown">HECHO A TU ESTILO</h1>
+        </div>
+        <div class="catalogoM">
+            <div class="wow animate__animated animate__bounceInLeft img">
+                <img src="images/catalogoMuestra.png" alt="">
+            </div>
+            <div class="text"> 
+                <h1>Catalogo</h1>
+                <p>Te brindamos un catalogo personalizable con los colores 
+                    de tu empresa totalmente gratis
+                </p> 
+                <p>El Catalogo viene con herramientas como
+                    cotizadores profesionales para automatizar los pedidos de tus clientes 
+                </p>
+                <p>
+                    Sube todos tus productos a tu catalogo y empieza
+                    a vender mas!
+                </p>
+            </div>
+        </div>
+        <div class="publicidadG">
+            <h1>publicidad <br> gratis</h1>
+            <p class="wow animate__animated animate__fadeInDown">Ofrecemos a los negocios publicidad gratuita 
+                en nuestras paginas y redes sociales para que muchos 
+                clientes potenciales puedan conocer tu negocio</p>
+                <div class="compra">
+                    <a href="#planes"><button>Ver Planes</button></a>
+                </div>
+        </div>
+        <div class="nuestrasV">
+            <h1>Nuestras Ventajas</h1>
+            <div class="ventajas">
+                <div class="wow animate__animated animate__fadeIn ventajaUno">
+                    <h2>Ahorra tu tiempo</h2>
+                    <p>Cansado de tener que mostrar todos tus 
+                        productos a tus clientes?
+                        No te preocupes nuestro catalogo lo hara por ti
+                    </p>
+                </div>
+                <div class="wow animate__animated animate__fadeIn ventajaDos">
+                    <h2>Mejora la experiencia de tus clientes </h2>
+                    <p>Mejora la experiencia de tus clientes con catalogoMuestra
+                        diseñados especialmente para automatizar, optimizar y subir tus ventas
+                    </p>
+                </div>
+                <div class="wow animate__animated animate__fadeIn ventajaUno">
+                    <h2>Automatiza tus ventas</h2>
+                    <p>Cada cliente podra hacer su cotizacion en el catalogo
+                        que luego lo redireccionara al WhatsApp de tu negocio
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="compra" style="background-color: transparent;">
+           <a href="#planes"><button style="background-color: #0C33BC; border-color: black;">Ver Planes</button></a>
+        </div>
+        <div class="titulo_uno" style="margin-top: 30px;">
+            <h1>DESCUENTO PROMOCION</h1>
+        </div>
+        <div class=" TextosU">
+            <p class="wow animate__animated animate__zoomIn">Solo debes brindar una promocion o descuento a las personas que tengan el QR de indentificacion de 
+                nuestra empresa, Asi te garantizamos que los clientes siempre
+                tengan prioridad hacia tu negocio
+            </p>
+
+            <h2 class="wow animate__animated animate__zoomIn">IMPORTANTE</h2>
+            
+            <p  class="wow animate__animated animate__zoomIn">Mientras tu descuento sea mas alto te colocaremos en los primeros resultados de busqueda,
+                te daremos descuentos en los planes de paga y te aseguramos que tus ventas se multiplicaran
+            </p>
+            <div class="planes" id="planes">
+                <div class="wow animate__animated animate__fadeInUp plan">
+                    <img class="wow animate__animated animate__fadeInUp" src="images/planes/pgratis.svg" alt="">
+                    <div class="compra">
+                        <button onclick="comprar('Gratis', 0)" style="background-color: #0C33BC; border-color: black;">Reservar Plan Gratis</button>
+                    </div>
+                </div>
+                <div class="plan">
+                    <img class="wow animate__animated animate__fadeInUp" src="images/planes/pimpulsado.svg" alt="">
+                    <div class="compra">
+                        <p>Reserva tu espacio ahora a solo 200Bs</p>
+                        <button onclick="comprar('Impulsado', 200)" style="background-color: #0C33BC; border-color: black;">Reservar Plan Impulsado</button>
+                    </div>
+                </div>
+                <div class="plan">
+                    <img class="wow animate__animated animate__fadeInUp" src="images/planes/pmetaimpulsado.svg" alt="">
+                    <div class="compra">
+                        <p>Reserva tu espacio ahora a solo 400Bs</p>
+                        <button onclick="comprar('Meta Impulsado', 400)" style="background-color: #0C33BC; border-color: black;">Reservar Plan Meta Impulsado</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+    </div>
+    <script>
+        function comprar(plan, precio){
+            var empresa = prompt(`Cual es el nombre de tu empresa?`, '');
+            if(empresa){
+                window.open(`https://api.whatsapp.com/send?phone=+59175270413&text=Comprar%0A%0A*Plan:%20${plan}*%0A%0A*Precio*:%20${precio}%0A%0A`)
+            }
+        }
+    </script>
+    <%- include('Componentes/Js.html'); %>
+  </body>
+</html>
