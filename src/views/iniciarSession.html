@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Impulse | Registrarse</title>
+     <!--- basic page needs
+    ================================================== -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <%- include('Componentes/Links.html'); %>
+</head>
+<body>
+    <%- include('Componentes/Nav.html'); %>
+
+    <div class="contenedor">
+        <div class="welcome">
+            <form action="admin" method="post">
+                <div class="contenido">
+                    <Label>Numero de Telefono</Label>
+                    <input type="text" placeholder="escribe tu numero de telofono" name="user" required>
+                    <Label>Contrasena</Label>
+                    <input type="text" placeholder="Coloca tu clave" name="password" required> 
+                    <input type="submit" value="Iniciar Session">
+                    <p id="loginerr" style="<%=fallo%>">usuario o contrasena incorrecta</p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <style>
+        .contenedor .welcome{
+            height: 70vh;
+        }
+        .contenedor .welcome form{
+            text-align: center;
+            margin: auto;
+            width: 40%;
+        }
+        .contenedor .welcome .contenido{
+            margin: auto;
+            text-align: center;
+        }
+        .contenedor .welcome label{
+            color: white;
+        }
+        .contenedor .welcome input{
+            background-color: white;
+            height: 45px;
+        }
+    </style>
+
+    <%- include('Componentes/Js.html'); %>
+</body>
+</html>

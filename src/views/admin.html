@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Impulse | Administardor</title>
+     <!--- basic page needs
+    ================================================== -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <%- include('Componentes/Links.html'); %>
+</head>
+<body>
+    <%- include('Componentes/Nav.html'); %>
+    <div class="contenedor">
+        <div class="opciones">
+            <button>Crear Producto</button><button>Crear Categoria</button><br>
+            <button>Estilos de Catalogo</button><button>Configurar mi tienda</button><br>
+            <button>Estadisticas</button><button>Notificaciones</button><br>
+            <div class="crearCategoria">
+                <form action="">
+                    <label for="">Nombre de la categoria</label>
+                    <input type="text" placeholder="Categoria nueva">
+                    <input type="submit" value="Crear Categoria">
+                </form>
+                <form action="">
+                    <label for="">Borrar Categoria</label>
+                    <select name="" id=""><option value="">lol</option></select>
+                    <input type="submit" value="Borrar Categoria">
+                </form>
+            </div>
+        </div>
+    </div>
+    <%- include('Componentes/Js.html'); %>
+    
+</body>
+</html>

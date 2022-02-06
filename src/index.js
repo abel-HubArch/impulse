@@ -14,9 +14,16 @@ app.set('view engine', 'ejs');
 //midelWare
 app.use(morgan('dev'));
 
+//bodyparser
+var bodyParser = require ('body-parser');
+
+app.use (bodyParser ());
 
 //Routes
 app.use(require('./routes'));
+//Routes
+app.use(require('./routes/admin/admin.js'));
+
 
 //Localizacion de muestra de archivos
 app.use(express.static(path.join(__dirname, 'public')));

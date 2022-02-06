@@ -1,0 +1,24 @@
+.contenedor{
+
+}
+.contenedor .opciones{
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+.contenedor .opciones button{
+    width: 48%;
+}
+.contenedor form{
+    margin: auto;
+    margin-top: 30px;
+}
+.contenedor input{
+    margin: auto;
+}
+.contenedor select{
+    margin: auto;
+}
+#loginerr{
+    display: none;
+}
