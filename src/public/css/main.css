@@ -1518,6 +1518,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 .header-nav p {
     margin-bottom: 2.7rem;
+    color: rgb(212, 209, 209);
 }
 
 .header-nav__content {

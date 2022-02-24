@@ -21,8 +21,13 @@ app.use (bodyParser ());
 
 //Routes
 app.use(require('./routes'));
+
 //Routes
 app.use(require('./routes/admin/admin.js'));
+
+//Rutas de opciones catalogo admin
+
+app.use(require('./routes/admin/crearCategoria'))
 
 
 //Localizacion de muestra de archivos

@@ -1,6 +1,31 @@
 .contenedor{
-
+margin: auto;
+text-align: center;
+margin-top: 80px;
 }
+.contenedor .datos{
+    display: flex;
+    justify-content: center;
+    
+    height: 35vh;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 30px;
+}
+.contenedor .datos h3{
+    font-size: 15px;
+    color: white;
+    
+}
+
+.contenedor .datos h1{
+    margin: 50px 15% 0px;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    color: white;
+}
+
 .contenedor .opciones{
     width: 100%;
     text-align: center;

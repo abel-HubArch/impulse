@@ -19,16 +19,33 @@
             <form action="admin" method="post">
                 <div class="contenido">
                     <Label>Numero de Telefono</Label>
-                    <input type="text" placeholder="escribe tu numero de telofono" name="user" required>
+                    <input id="userName" type="text" placeholder="escribe tu numero de telofono" name="user" required>
                     <Label>Contrasena</Label>
-                    <input type="text" placeholder="Coloca tu clave" name="password" required> 
-                    <input type="submit" value="Iniciar Session">
+                    <input id="password" type="text" placeholder="Coloca tu clave" name="password" required> 
+                    <input id="subirDatos" type="submit" value="Iniciar Session">
                     <p id="loginerr" style="<%=fallo%>">usuario o contrasena incorrecta</p>
                 </div>
             </form>
         </div>
     </div>
+    <script
+			  src="https://code.jquery.com/jquery-3.6.0.js"
+			  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+			  crossorigin="anonymous">
+    </script>
 
+<script>
+    var user = document.getElementById('userName');
+    var password = document.getElementById('password');
+      if (localStorage.getItem('user') || localStorage.getItem('password')) {
+        user.value = localStorage.getItem('user');
+        password.value = localStorage.getItem('password')
+        
+        $("#subirDatos"). trigger("click");
+    }else{
+                console.log('no existe');
+    }
+</script>
     <style>
         .contenedor .welcome{
             height: 70vh;
@@ -48,6 +65,7 @@
         .contenedor .welcome input{
             background-color: white;
             height: 45px;
+            color: black;
         }
     </style>
 

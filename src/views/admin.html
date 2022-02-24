@@ -14,25 +14,60 @@
 <body>
     <%- include('Componentes/Nav.html'); %>
     <div class="contenedor">
+        <div class="datos" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.38)), url(<%= datos.ng_perfil%>)">
+            <h3><%= datos.categoria%></h3>
+            <h1><%= datos.ng_nombre%></h1>
+            <h3>Plan <br> <%= datos.ng_plan%></h3>
+            
+        </div>
+
         <div class="opciones">
-            <button>Crear Producto</button><button>Crear Categoria</button><br>
+            <button>Crear Categoria</button><button>Crear Producto</button><br>
             <button>Estilos de Catalogo</button><button>Configurar mi tienda</button><br>
             <button>Estadisticas</button><button>Notificaciones</button><br>
             <div class="crearCategoria">
-                <form action="">
+                <form action="/admin/crearCategoria" method="post">
                     <label for="">Nombre de la categoria</label>
-                    <input type="text" placeholder="Categoria nueva">
+                    <input name="categoriaNew" type="text" placeholder="Categoria nueva">
+                    <input name="empresa" type="text" value="<%= datos.ng_nombre%>">
                     <input type="submit" value="Crear Categoria">
                 </form>
-                <form action="">
-                    <label for="">Borrar Categoria</label>
-                    <select name="" id=""><option value="">lol</option></select>
+
+                <form action="/admin/borrarCategoria" method="post">
+                    <label for="">Nombre de la Categoria por Borrar</label>
+                    <input name="categoriaRemove" type="text" placeholder="Categoria nueva">
+                    <input name="empresa" type="text" value="<%= datos.ng_nombre%>">
                     <input type="submit" value="Borrar Categoria">
                 </form>
             </div>
         </div>
+
+        <p onclick="cerrarSession()">Cerrar Session</p>
     </div>
     <%- include('Componentes/Js.html'); %>
     
+    <script>
+        localStorage.setItem('user', '<%= user%>');
+        localStorage.setItem('password', '<%= password%>');
+        localStorage.setItem('propietario', '<%= propietario%>');
+        localStorage.setItem('nit', '<%= nit%>');
+        localStorage.setItem('description', '<%= description%>');
+        localStorage.setItem('categoria', '<%= datos.categoria%>');
+        localStorage.setItem('empresa', '<%= datos.ng_nombre%>');
+
+
+        function cerrarSession() {
+            localStorage.removeItem('user');
+            localStorage.removeItem('password');
+            localStorage.removeItem('propietario');
+            localStorage.removeItem('nit');
+            localStorage.removeItem('description');
+            localStorage.removeItem('categoria');
+            localStorage.removeItem('empresa');
+
+            console.log(localStorage.getItem('user'));
+            window.location.href = 'iniciar-sesion'; 
+        }
+    </script>
 </body>
 </html>

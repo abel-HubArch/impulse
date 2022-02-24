@@ -14,11 +14,16 @@ router.post('/admin', (req, res) => {
     let user = req.body.user;
     let password = req.body.password;
     const doc = db.collection('negocios').doc(user);
+    
+    
+
     var getDoc = doc.get().then(doc =>{
         if (doc.exists) {      
             console.log(doc.data().password);
             if(doc.data().password == password){
-              res.render('admin.html')
+                 
+                res.render('admin.html', {datos: doc.data(), password: doc.data().password, user: user, propietario: doc.data().propietario, description: doc.data().description, nit: doc.data().nit})
+
             }
         }else{
             console.log('No existe usuario');

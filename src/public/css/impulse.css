@@ -3,7 +3,8 @@ html{
 }
 .contenedor{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    max-height: wrap;
     background-color: white;
     margin-top: 90px;
 }

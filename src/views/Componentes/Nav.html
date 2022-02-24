@@ -24,7 +24,7 @@
                     <li><a href="contactanos" title="contactanos">Contactanos </a></li>
                 </ul>
     
-                <p>IMPULSE es una empresa de impulso hacia negocios <a href='#0'>Contactar</a> unete a nosotros e impulsa tu negocio a otro nivel. Con publicidad y mentoria gratuita</p>
+                <p id="textoInf"></p>
     
                 <ul class="header-nav__social">
                     <li>
@@ -43,8 +43,8 @@
                         <a href="#"><i class="fa fa-dribbble"></i></a>
                     </li>
                 </ul>
-                <li><a href="iniciar-sesion" title="iniciar sesion">Iniciar Session</a></li>
-                <li><a href="registrarse" title="iniciar sesion">Registrarse</a></li>
+                <li><a id="lgText" href="iniciar-sesion" title="iniciar sesion">Iniciar Session</a></li>
+                <li><a id="Registrarse" onclick="cerrarUregistrar()" title="iniciar sesion">Registrarse</a></li>
             </div> <!-- end header-nav__content -->
 
         </nav>  <!-- end header-nav -->
@@ -53,5 +53,32 @@
             <span class="header-menu-text">Menu</span>
             <span class="header-menu-icon"></span>
         </a>
+        <script>
+            var session = document.getElementById('lgText');
+            var registrarse = document.getElementById('Registrarse');
+            var info = document.getElementById('textoInf');
 
+            //validamos si existe una session iniciada
+            if (localStorage.getItem('user') || localStorage.getItem('password')) {
+                console.log('existe');
+                session.textContent ="Ingresar a Inventario";
+                registrarse.textContent = "Cerrar Session";
+                info.textContent = `${localStorage.getItem('categoria')} ${localStorage.getItem('empresa')} de ${localStorage.getItem('propietario')} - ${localStorage.getItem('description')}`
+            }else{
+                console.log('no existe');
+                info.textContent = "IMPULSE es una empresa de impulso hacia negocios unete a nosotros e impulsa tu negocio a otro nivel. Con publicidad y mentoria gratuita"
+            }
+            function cerrarUregistrar() {
+                if (localStorage.getItem('user') || localStorage.getItem('password')) {
+                    localStorage.removeItem('user');
+                    localStorage.removeItem('password');
+                    window.location.href = '/'; 
+                }else{
+                    window.location.href = 'registrarse'; 
+                }
+            }
+            
+             
+             
+        </script>
     </header> <!-- end s-header -->
